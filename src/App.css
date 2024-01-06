@@ -1,38 +1,48 @@
-.App {
-  text-align: center;
-}
+main {
+  height: 100vh;
+  width: 100%;
+  background-color: #242742;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+#card {
+  background-color: white;
+  width: 700px;
+  height: 400px;
+  border-radius: 1rem;
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#info {
+  flex: 1;
+}
+
+#fm-image-container {
+  flex: 1;
+  background-image: url("./images/illustration-sign-up-desktop.svg");
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#fm-image {
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: flex;
+  gap: 1rem;
+}
+
+span {
+  font-weight: 700;
 }

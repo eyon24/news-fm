@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Home from "./Home";
 
 function App() {
+  const [success, setSuccess] = useState(false);
+  const [email, setEmail] = useState("");
+
+  const handleOnClick = () => {
+    setSuccess(!success);
+  };
+
+  const handleOnChange = (e) => {
+    setEmail(e.target.value);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      {(success && <div>Good Job</div>) || (
+        <Home
+          email={email}
+          handleOnChange={handleOnChange}
+          handleOnClick={handleOnClick}
+        />
+      )}
+    </main>
   );
 }
 
