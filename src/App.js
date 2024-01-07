@@ -1,12 +1,13 @@
 import { useState } from "react";
 import "./App.css";
 import Home from "./Home";
+import Confirmation from "./Confirmation";
 
 function App() {
   const [success, setSuccess] = useState(false);
   const [email, setEmail] = useState("");
 
-  const handleOnClick = () => {
+  const toggleClick = () => {
     setSuccess(!success);
   };
 
@@ -16,11 +17,13 @@ function App() {
 
   return (
     <main>
-      {(success && <div>Good Job</div>) || (
+      {(success && (
+        <Confirmation email={email} toggleClick={toggleClick} />
+      )) || (
         <Home
           email={email}
           handleOnChange={handleOnChange}
-          handleOnClick={handleOnClick}
+          toggleClick={toggleClick}
         />
       )}
     </main>

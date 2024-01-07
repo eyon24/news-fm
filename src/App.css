@@ -10,10 +10,11 @@ main {
 
 #card {
   background-color: white;
-  width: 700px;
-  height: 400px;
+  width: 900px;
+  height: 600px;
   border-radius: 1rem;
   display: flex;
+  padding: 2rem;
 }
 
 #info {
@@ -25,13 +26,11 @@ main {
   background-image: url("./images/illustration-sign-up-desktop.svg");
   width: 100%;
   height: 100%;
+  border-radius: 1rem;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-}
-
-#fm-image {
 }
 
 ul {
@@ -43,6 +42,34 @@ li {
   gap: 1rem;
 }
 
+#labels {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hide {
+  display: none;
+}
+
+.error-message {
+  display: block;
+  color: #ff6257;
+}
+
+.error-input {
+  color: #ff6257;
+  background-color: #ff625740;
+}
+
 span {
   font-weight: 700;
+}
+
+#success-container {
+  background-color: white;
+}
+
+#pmail {
+  font-weight: 700;
+  display: inline;
 }
